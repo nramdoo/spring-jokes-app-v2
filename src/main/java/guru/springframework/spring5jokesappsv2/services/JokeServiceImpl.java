@@ -7,16 +7,16 @@ import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 @Service
 public class JokeServiceImpl implements JokeService {
 	
-	private final ChuckNorrisQuotes chuckNorrisnotes;
+	private final ChuckNorrisQuotes chuckNorrisQuotes;
 	
 
-	public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisnotes) {
-		this.chuckNorrisnotes = chuckNorrisnotes;
+	public JokeServiceImpl() {
+		this.chuckNorrisQuotes = new ChuckNorrisQuotes();
 	}
 
 	@Override
 	public String getJoke() {
-		return chuckNorrisnotes.getRandomQuote();
+		return chuckNorrisQuotes.getRandomQuote();
 	}
 
 }
